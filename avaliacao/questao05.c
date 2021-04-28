@@ -1,28 +1,46 @@
+/*
+    Programa para uma pesquisa de habitantes de uma região
+*/
+
 #include <stdio.h>
 
 int main()
 {
     char sexo, menorSexo;
-    int idade = 1, mulheres = 0, idadeMenorSalario = 0, maiorIdade, menorIdade;
-    float salario, mediaSalario, somaSalario = 0, menorSalario = 0, maiorSalario = 0;
+    int idade = 999, mulheres = 0, idadeMenorSalario = 999, maiorIdade = 0, menorIdade = 999;
+    float salario, mediaSalario, somaSalario = 0, menorSalario = 999999, maiorSalario = 0;
     int contador = 0;
-
-    printf("Digite a idade do entrevistado: ");
-    scanf(" %d", &idade);
 
     while (idade >= 0)
     {
+        printf("Digite a idade do entrevistado: ");
+        scanf(" %d", &idade);
+
+        if (idade <= 0)
+        {
+            break;
+        }
+
+           if (idade > maiorIdade)
+        {
+            maiorIdade = idade;
+        }
+        
+        if (idade < menorIdade)
+        {
+            menorIdade = idade;
+        }
    
         printf("Digite M para masculino e F para feminino: ");
         scanf(" %c", &sexo);
 
         if (sexo == 'F')
         {
-         mulheres = mulheres + 1;
+            mulheres = mulheres + 1;
         }
    
-        printf("Digite o salario do entrevistado: \n");
-        scanf("%f", &salario);
+        printf("Digite o salario do entrevistado: ");
+        scanf(" %f", &salario);
 
          if (maiorSalario < salario)
         {
@@ -39,27 +57,14 @@ int main()
 
         somaSalario = somaSalario + salario;
         contador = contador + 1;
-        printf("***O programa pode ser finalizado ao digitar uma idade negativa***\n\n");
-
-            printf("Digite a idade do entrevistado: ");
-        scanf(" %d", &idade);
-
-        if (idade > maiorIdade)
-        {
-            maiorIdade = idade;
-        }
-        
-        if (idade < menorIdade)
-        {
-            menorIdade = idade;
-        }
+        printf("\n***O programa pode ser finalizado ao digitar uma idade negativa***\n\n");  
 
     }
  
     mediaSalario = somaSalario / (float) contador;
 
-    printf("A media dos salarios é %.2f\n", mediaSalario);
-    printf("A maior e a menor idade é %d e %d\n", maiorIdade, menorIdade);
+    printf("\n\nA media dos salarios é %.2f\n", mediaSalario);
+    printf("A maior idade é %d e a menor idade é %d\n", maiorIdade, menorIdade);
     printf("A quantidade de mulheres na região é de %d\n", mulheres);
     printf("A idade e o sexo da pessoa que possui o menor \n");
     printf("salario é de %d anos e é do sexo %c \n", idadeMenorSalario, sexo);
