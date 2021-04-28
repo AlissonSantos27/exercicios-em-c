@@ -4,12 +4,13 @@ int main()
 {
     int id, idade;
     float peso;
-    int alimentado, resfriado, aptos = 0, inaptos = 0, i;
+    char alimentado, resfriado;
+    int aptos = 0, inaptos = 0, i;
 
     for ( i = 1; i <= 10; i++)
     {
         printf("====================================\n");
-        printf("          %d DOADOR \n", i);
+        printf("           DOADOR %d\n", i);
         printf("====================================");
 
         printf("\n\nCadastre o codigo de doador: ");
@@ -21,16 +22,16 @@ int main()
         printf("Peso do doador: ");
         scanf("%f", &peso);
  
-        printf("O doador está bem alimentado? Digite 1 pra sim e 0 pra não: ");
-        scanf("%d", &alimentado);
+        printf("O doador está bem alimentado? [s/n]: ");
+        scanf(" %c", &alimentado);
 
-        printf("O doador está resfriado? Digite 1 pra sim e 0 pra não: ");
-        scanf("%d", &resfriado);
+        printf("O doador está resfriado? [s/n]: ");
+        scanf(" %c", &resfriado);
 
         printf("\nID do doador: %d\n", id);
 
-            if ((idade >= 16) && (idade <= 69) && (peso >= 50) && (alimentado == 1) && 
-            (resfriado == 0))
+            if ((idade >= 16) && (idade <= 69) && (peso >= 50) && (alimentado == 's') && 
+            (resfriado == 'n'))
             {
                 printf("O voluntario está apto.\n\n");
                 aptos = aptos + 1;
