@@ -1,6 +1,4 @@
-/*
-    Programa para uma pesquisa de habitantes de uma região
-*/
+/*Programa para uma pesquisa de habitantes de uma região*/
 
 #include <stdio.h>
 
