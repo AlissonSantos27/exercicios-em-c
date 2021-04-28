@@ -10,12 +10,6 @@ int main()
     int abaixoPeso = 0, pesoNormal = 0, acimaPeso = 0, obeso = 0;
     float massaCorporal;
 
-    /*printf("Digite a altura da pessoa: ");
-    scanf("%f", &altura);
-
-    printf("Digite o peso da pessoa: ");
-    scanf("%f", &peso);*/
-
     while (obeso != 4)
     {
         printf("\nDigite a altura da pessoa: ");
@@ -25,7 +19,6 @@ int main()
         scanf("%f", &peso);
 
         massaCorporal = peso / (altura * altura);
-        printf("%.2f", massaCorporal);
 
         if (massaCorporal <= 18.5)
         {
