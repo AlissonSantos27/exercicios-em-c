@@ -64,7 +64,7 @@ int main()
     printf("\n\nA media dos salarios é %.2f\n", mediaSalario);
     printf("A maior idade é %d e a menor idade é %d\n", maiorIdade, menorIdade);
     printf("A quantidade de mulheres na região é de %d\n", mulheres);
-    printf("A idade e o sexo da pessoa que possui o menor \n");
+    printf("A idade e o sexo da pessoa que possui o menor ");
     printf("salario é de %d anos e é do sexo %c \n", idadeMenorSalario, sexo);
     
 

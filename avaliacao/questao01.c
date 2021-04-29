@@ -1,3 +1,16 @@
+/*
+1 - Fazer um programa que: dada a altura e peso de uma pessoa, calcule seu índice de 
+massa corporal.
+Fórmula: peso dividido por altura ao quadrado.
+Faixas:
+<= 18,5 - abaixo do peso normal;
+> 18,5 e <= 25 - peso normal;
+> 25 e <=30 - peso acima do normal;
+acima de 30 - peso excessivo.
+Fique lendo até atingir 4 pessoas com peso excessivo, ai imprima o total de pessoas de cada 
+faixa de peso.
+*/
+
 //calculadora de indice de massa corporal que após 4 resultados de pessoas
 //obesas imprime a quantidade de pessoas e suas faixas de peso.
 
